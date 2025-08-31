@@ -1,6 +1,4 @@
-```markdown
-
-\# 📘 Data Structures and Algorithms (DSA) Roadmap  
+# 📘 Data Structures and Algorithms (DSA) Roadmap  
 
 
 
@@ -11,66 +9,11 @@ It is organized into folders by topics for easy navigation and revision.
 
 
 ---
+## 📑 Step-by-Step DSA Topics  
 
 
 
-\## 📂 Folder Structure  
-
-
-
-```
-
-
-
-DSA/
-
-│── 01\\\_Basics/
-
-│── 02\\\_Arrays/
-
-│── 03\\\_Strings/
-
-│── 04\\\_Linked\\\_List/
-
-│── 05\\\_Stacks\\\_Queues/
-
-│── 06\\\_Recursion\\\_Backtracking/
-
-│── 07\\\_Trees/
-
-│── 08\\\_Heaps/
-
-│── 09\\\_Hashing/
-
-│── 10\\\_Graphs/
-
-│── 11\\\_Greedy/
-
-│── 12\\\_Dynamic\\\_Programming/
-
-│── 13\\\_Bit\\\_Manipulation/
-
-│── 14\\\_Math/
-
-│── 15\\\_Practice\\\_Problems/
-
-│── README.md
-
-
-
-```
-
-
-
----
-
-
-
-\## 📑 Step-by-Step DSA Topics  
-
-
-
-\### \*\*1. Basics\*\*
+### Basics
 
 \- Time \& Space Complexity  
 
@@ -84,9 +27,7 @@ DSA/
 
 ---
 
-
-
-\### \*\*2. Arrays\*\*
+### 2. Arrays
 
 \- 1D \& 2D Arrays  
 
@@ -102,9 +43,7 @@ DSA/
 
 ---
 
-
-
-\### \*\*3. Strings\*\*
+### 3. Strings
 
 \- String Basics (Reversal, Palindrome, Anagrams)  
 
@@ -120,7 +59,7 @@ DSA/
 
 
 
-\### \*\*4. Linked List\*\*
+### 4. Linked List\*\*
 
 \- Singly Linked List  
 
@@ -138,7 +77,7 @@ DSA/
 
 
 
-\### \*\*5. Stacks \& Queues\*\*
+### 5. Stacks \& Queues\*\*
 
 \- Stack Basics \& Applications  
 
@@ -156,7 +95,7 @@ DSA/
 
 
 
-\### \*\*6. Recursion \& Backtracking\*\*
+### 6. Recursion \& Backtracking
 
 \- Factorial, Fibonacci  
 
@@ -174,7 +113,7 @@ DSA/
 
 
 
-\### \*\*7. Trees\*\*
+### 7.Trees
 
 \- Binary Trees (Traversals, Diameter, Height, etc.)  
 
@@ -190,7 +129,7 @@ DSA/
 
 
 
-\### \*\*8. Heaps\*\*
+### 8. Heaps
 
 \- Min Heap, Max Heap  
 
@@ -206,7 +145,7 @@ DSA/
 
 
 
-\### \*\*9. Hashing\*\*
+### 9. Hashing\*\*
 
 \- Hashmaps \& Hashsets  
 
@@ -222,7 +161,7 @@ DSA/
 
 
 
-\### \*\*10. Graphs\*\*
+### 10. Graphs
 
 \- Representations (Adjacency List/Matrix)  
 
@@ -242,7 +181,7 @@ DSA/
 
 
 
-\### \*\*11. Greedy Algorithms\*\*
+### 11. Greedy Algorithms
 
 \- Activity Selection  
 
@@ -258,7 +197,7 @@ DSA/
 
 
 
-\### \*\*12. Dynamic Programming\*\*
+### 12. Dynamic Programming
 
 \- Fibonacci Variants  
 
@@ -278,7 +217,7 @@ DSA/
 
 
 
-\### \*\*13. Bit Manipulation\*\*
+### 13. Bit Manipulation
 
 \- Basic Bit Operations (\&, |, ^, ~, <<, >>)  
 
@@ -296,7 +235,7 @@ DSA/
 
 
 
-\### \*\*14. Math for DSA\*\*
+### 14. Math for DSA
 
 \- Prime Numbers (Sieve of Eratosthenes)  
 
@@ -314,7 +253,7 @@ DSA/
 
 
 
-\### \*\*15. Practice Problems\*\*
+### 15. Practice Problems
 
 \- Mixed Topic Problems (from LeetCode, Codeforces, GFG, etc.)  
 
@@ -326,9 +265,7 @@ DSA/
 
 ---
 
-
-
-\## 🎯 Goal  
+# 🎯 Goal  
 
 \- Cover all fundamentals step by step  
 
@@ -339,24 +276,4 @@ DSA/
 
 
 ---
-
-
-
-\## 🚀 Resources  
-
-\- \[LeetCode](https://leetcode.com/)  
-
-\- \[GeeksforGeeks](https://www.geeksforgeeks.org/)  
-
-\- \[Codeforces](https://codeforces.com/)  
-
-\- \[InterviewBit](https://www.interviewbit.com/)  
-
-\- \[CP Algorithms](https://cp-algorithms.com/)  
-
-
-
----
-
-```
-
+# Thank You
