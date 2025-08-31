@@ -1,0 +1,121 @@
+# -------------------------------
+# Python
+# -------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+*.pkl
+*.sqlite3
+*.log
+.Python
+.env
+.venv/
+env/
+venv/
+ENV/
+.ipynb_checkpoints
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.eggs/
+
+# -------------------------------
+# Java
+# -------------------------------
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.car
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+*.log
+
+# Maven
+target/
+dependency-reduced-pom.xml
+release.properties
+
+# Gradle
+.gradle/
+build/
+out/
+!gradle-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# -------------------------------
+# C / C++
+# -------------------------------
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.a
+*.lib
+*.la
+*.lo
+*.swp
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+build/
+
+# -------------------------------
+# JavaScript / Node.js
+# -------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+build/
+.cache/
+.next/
+.nuxt/
+out/
+coverage/
+*.tsbuildinfo
+
+# -------------------------------
+# Common OS / Editor Files
+# -------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# VSCode
+.vscode/
+.history/
