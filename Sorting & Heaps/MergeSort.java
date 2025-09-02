@@ -45,6 +45,13 @@ public class MergeSort {
             System.out.print(num+" ");
         }
     }
+
+    public static  void problems(){
+        // Leetcode 88 Merge Sorted Arrays
+        // Leetcode 912. Sort an Array
+        // Leetcode 75. Sort Colors
+    }
+
     public static void main(String[] args){
         int nums [] = {100,80,40,60,70,50,10,20,5};
         System.out.println("The Unsorted array is: ");
