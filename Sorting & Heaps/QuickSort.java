@@ -22,10 +22,35 @@ class QuickSort{
         return i+1;
     };
 
+    public static int hoares_partion(int[] nums,int low,int high){
+        // The fastest Partioning Algorithm
+        // Traverse the array from both  the side and keep swapping.
+        int pivot = nums[low];
+        int i = low-1;
+        int j = high +1;
+
+        while (true){
+            do {
+                i++;
+
+            }while (nums[i]<pivot);
+
+            do {
+                j--;
+            }while (nums[j] > pivot);
+
+            if(i>=j){
+                return j;
+            }
+            swap(nums,i,j);
+        }
+
+    };
+
     public static void quickSort(int[] nums,int low,int high){
         if (low<high){
-            int pivIdx = lomuto_partition(nums,low,high);
-            quickSort(nums,low,pivIdx-1);
+            int pivIdx = hoares_partion(nums,low,high); //lomuto_partition(nums,low,high);
+            quickSort(nums,low,pivIdx);
             quickSort(nums,pivIdx+1,high);
         }
     }
