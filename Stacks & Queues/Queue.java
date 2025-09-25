@@ -1,94 +1,56 @@
-import java.util.Scanner;
+class Queue{
+    static int[] queue = new int[10];
+    static int capacity = 10;
+    static int front = -1;
+    static int rear = -1;
 
-class Queue {
-    public static int[] queue = new int[5];
-    public static int front = -1;
-    public static int rear = -1;
-    public static Scanner sc = new Scanner(System.in);
-
-    public static boolean isEmpty() {
-        return front == -1 && rear == -1;
+    public static void enQueue(int element){
+        if(rear == capacity-1){
+            System.out.println("Queue if full.");
+            return;
+        }
+        if (rear == -1){
+            rear++;
+            front++;
+        }else {
+            rear++;
+        }
+        queue[rear] = element;
     }
 
-    public static boolean isFull() {
-        return rear == queue.length - 1;
+    public static int deQueue(){
+        if (front==-1){
+            System.out.println("Queue is empty.");
+            return 0;
+        }
+        int element  = queue[front++];
+        if (front > rear){
+            front = -1;
+            rear = -1;
+        }
+        return element;
     }
 
-    public static int peek() {
-        if (isEmpty()) {
-            System.out.println("The queue is empty.");
-            return -1;
+    public static int peek(){
+        if (front==-1){
+            System.out.println("Queue is empty.");
+            return 0;
         }
         return queue[front];
     }
 
-    public static void enqueue() {
-        if (isFull()) {
-            System.out.println("The queue is Full.");
-            return;
+    public static void main(String[] args){
+        int[] nums = {10,20,30,40,60};
+
+        System.out.print("Adding elements to the queue.\n");
+        for(int num:nums){
+            enQueue(num);
+        }
+        System.out.print("Done Adding\n");
+        System.out.print("Dequeue in process.\n");
+        for (int num:nums){
+            System.out.print(deQueue()+"\n");
         }
 
-        System.out.print("Enter the number to be added:- ");
-        int value = sc.nextInt();
-
-        if (front == -1 && rear == -1) {
-            front = rear = 0;
-        } else {
-            rear++;
-        }
-
-        queue[rear] = value;
-        System.out.println(value + " added to queue.");
-    }
-
-    public static void dequeue() {
-        if (isEmpty()) {
-            System.out.println("The queue is empty.");
-            return;
-        }
-
-        System.out.println(queue[front] + " removed from queue.");
-
-        if (rear == front) {
-            rear = front = -1; // reset queue
-        } else {
-            front++;
-        }
-    }
-
-    // ✅ Main function here
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int choice;
-
-        while (true) {
-            System.out.println("\n1.Enqueue\n2.Dequeue\n3.Peek\n4.Is Queue Empty?\n5.Exit");
-            System.out.print("Enter Your Choice:- ");
-            choice = sc.nextInt();
-
-            switch (choice) {
-                case 1:
-                    enqueue();
-                    break;
-                case 2:
-                    dequeue();
-                    break;
-                case 3:
-                    int val = peek();
-                    if (val != -1) {
-                        System.out.println("Front element is: " + val);
-                    }
-                    break;
-                case 4:
-                    System.out.println(isEmpty() ? "Queue is Empty" : "Queue has elements");
-                    break;
-                case 5:
-                    System.out.println("Exiting...");
-                    sc.close();
-                    return;
-                default:
-                    System.out.println("Invalid choice!");
-            }
-        }
     }
 }
