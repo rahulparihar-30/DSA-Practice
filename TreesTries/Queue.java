@@ -1,15 +1,20 @@
+//Queue for storing anytype of data. Data can be of any type LinkedList, Integer, String etc. In the form of LinkedList.
+// T represents the type which is a placeholder as of now.
 class Queue<T>{
-    static class qNode<T>{
-        private T data;
-        private qNode<T> next;
 
+    // This represents the node of the linkedlist.
+    static class qNode<T>{
+
+        private T data; // Data part of singly linkedlist
+        private qNode<T> next;// Address of the next element.
+        // Constructor for Node class
         qNode(T data){
             this.data = data;
-            this.next = null;
+            this.next = null; // so that we don't have to initialize it everytime to nulll.
         }
     }
 
-    private qNode<T> front;
+    private qNode<T> front; // front
     private qNode<T> rear;
 
     public boolean isEmpty(){
