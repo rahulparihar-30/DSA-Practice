@@ -1,4 +1,4 @@
-class BubbleSort{
+public class BubbleSort{
     /*
     * Time Complexity average and best = O(n^2)
     * Spcae Complexity = O(1)
