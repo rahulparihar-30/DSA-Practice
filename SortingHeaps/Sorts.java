@@ -10,6 +10,7 @@ class Sorts{
         BubbleSort b = new BubbleSort();
         InsertionSort i = new InsertionSort();
         SelectionSort s = new SelectionSort();
+        QuickSort q = new QuickSort();
         int choice;
         int[] nums = {8,5,7,3,2};
 
@@ -26,6 +27,10 @@ class Sorts{
                     print(nums);
                     break;
                 case 3:s.selectionSort(nums,nums.length);
+                    System.out.println("After SelectionSort");
+                    print(nums);
+                    break;
+                case 4:q.quickSort(nums,0,nums.length-1);
                     System.out.println("After SelectionSort");
                     print(nums);
                     break;
