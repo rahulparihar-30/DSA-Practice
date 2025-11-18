@@ -1,55 +1,58 @@
 public class MergeSort {
-    public static void merge(int[] nums, int start,int mid,int end){
-        int[] temp = new int[end - start + 1];
-        int i = start;
-        int j = mid + 1;
-        int index = 0;
-        while (i <=mid && j <= end){
-            if (nums[i] >= nums[j]){
-                temp[index] = nums[j];
-                j+=1;
-                index+=1;
+    static void merge(int[] nums, int low,int mid,int high){
+        int[] arr = new int[high-low+1];
+        int i = low;
+        int j = mid+1;
+        int k = 0;
+
+        while (i<=mid && j <= high){
+            if (nums[i] < nums[j]){
+                arr[k] = nums[i];
+                i++;
             }else {
-                temp[index] = nums[i];
-                i+=1;
-                index+=1;
+                arr[k] = nums[j];
+                j++;
             }
+            k++;
         }
 
-        while (i<=mid){
-            temp[index] = nums[i];
-            i+=1;
-            index+=1;
+        while (i <= mid){
+            arr[k] = nums[i];
+            i++;
+            k++;
         }
 
-        while (j <= end){
-            temp[index] = nums[j];
-            j+=1;
-            index+=1;
+        while (j <= high){
+            arr[k] = nums[j];
+            j++;
+            k++;
         }
 
-        for (int k = 0;k < temp.length;k++){
-            nums[k+start] = temp[k];
-        }
-    };
-    public static void mergeSort(int[] nums,int start,int end){
-        if(start < end){
-            int mid = start + (end-start)/2;
-            mergeSort(nums,start,mid);
-            mergeSort(nums,mid+1,end);
-            merge(nums,start,mid,end);
-        }
-    };
-    public static void print(int[] nums){
-        for (int num:nums){
-            System.out.print(num+" ");
+        for(int m = low;m<=high;m++){
+            nums[m] = arr[m-low];
         }
     }
 
-    public static  void problems(){
-        // Leetcode 88 Merge Sorted Arrays
-        // Leetcode 912. Sort an Array
-        // Leetcode 75. Sort Colors
+    static void mergeSort(int[] nums,int n){
+        for(int p = 2;p<=n;p=p*2){
+            for (int i=0;i+p-1<n;i=i+p){
+                // i = 0, p = 2, = 0+2-1 = 1 < 8
+                int low = i,high = i+p-1;
+                int mid = low + (high-low) / 2;
+                // mid = 0 + (1-0) / 2 = 0.5 = 0;
+                merge(nums,low,mid,high);
+            }
+            if (p/2 < n){
+                merge(nums,0,p/2,n-1);
+            }
+        }
+    }
+
+
+    static void print(int[] nums){
+        for (int num:nums){
+            System.out.println(num);
+        }
     }
 
     public static void main(String[] args){
@@ -57,7 +60,7 @@ public class MergeSort {
         System.out.println("The Unsorted array is: ");
         print(nums);
         System.out.println();
-        mergeSort(nums,0,nums.length-1);
+        mergeSort(nums,nums.length);
         print(nums);
     };
 }
