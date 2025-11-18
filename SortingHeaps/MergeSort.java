@@ -55,12 +55,22 @@ public class MergeSort {
         }
     }
 
+    static void recursiveMergeSort(int[] nums, int low,int high){
+        if (low< high){
+            int mid = low + (high-low) / 2;
+            recursiveMergeSort(nums,low,mid);
+            recursiveMergeSort(nums,mid+1,high);
+            merge(nums,low,mid,high);
+        }
+    }
     public static void main(String[] args){
         int nums [] = {100,80,40,60,70,50,10,20,5};
         System.out.println("The Unsorted array is: ");
         print(nums);
         System.out.println();
-        mergeSort(nums,nums.length);
+//        mergeSort(nums,nums.length);
+        recursiveMergeSort(nums,0,nums.length-1);
         print(nums);
+
     };
 }

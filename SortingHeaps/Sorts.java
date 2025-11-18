@@ -11,11 +11,13 @@ class Sorts{
         InsertionSort i = new InsertionSort();
         SelectionSort s = new SelectionSort();
         QuickSort q = new QuickSort();
+        CountingSort c = new CountingSort();
+
         int choice;
         int[] nums = {8,5,7,3,2};
 
         while (true){
-            System.out.print("\n1.BubbleSort\n2.InsertionSort\n3.SelectionSort\n4.MergeSort\n5.QuickSort\nEnter your Choice:- ");
+            System.out.print("\n1.BubbleSort\n2.InsertionSort\n3.SelectionSort\n4.MergeSort\n5.CountingSort\nEnter your Choice:- ");
             choice = scan.nextInt();
             switch (choice){
                 case 1: b.bubbleSort(nums,nums.length);
@@ -32,6 +34,10 @@ class Sorts{
                     break;
                 case 4:q.quickSort(nums,0,nums.length-1);
                     System.out.println("After SelectionSort");
+                    print(nums);
+                    break;
+                case 5:c.countingSort(nums,nums.length);
+                    System.out.println("After CountingSort");
                     print(nums);
                     break;
                 default:System.out.println("Wrong Choice");
