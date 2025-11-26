@@ -14,6 +14,7 @@ class Sorts{
         CountingSort c = new CountingSort();
         BinSort bin = new BinSort();
         BucketSort bucket = new BucketSort();
+        ShellSort shell = new ShellSort();
 
         int choice;
         int[] nums = {8,5,7,3,2};
@@ -44,6 +45,11 @@ class Sorts{
                     break;
                 case 6:bucket.bucketSort(nums,nums.length);
                     System.out.println("After BinSort");
+                    print(nums);
+                    break;
+                case 7:System.out.println("Yet To be implmented.");
+                case 8: shell.shellSort(nums,nums.length);
+                    System.out.println("After ShellSort");
                     print(nums);
                     break;
                 default:System.out.println("Wrong Choice");
